@@ -57,4 +57,4 @@ export PATH=/tmp:$PATH
 ./ch11
 ```
 
-we will get password !oPe96a/.s8d5
+we will get flag `!oPe96a/.s8d5`
