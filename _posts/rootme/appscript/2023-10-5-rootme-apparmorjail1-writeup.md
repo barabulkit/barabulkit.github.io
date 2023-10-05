@@ -1,6 +1,6 @@
 ---
 title: RootMe AppArmor Jail - Indroduction Writeup
-date: 2023-10-03
+date: 2023-10-05
 categories: [RootMe, AppScript]
 tags: [RootMe, RootMe - AppScript, WriteUp]
 author: barabulkit
