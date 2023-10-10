@@ -164,7 +164,7 @@ adb pull  /data/data/com.thirdparty.superuser/databases/
 
 ![superuserdb](/assets/img/rootme/realistic/enddroid/enddroiddb.png)
 
-So that is all i was able to find in this challenge and still was not able to validate it, but at least i learned a bit about android
-
+So that is all i was able to find in this challenge and still was not able to validate it, but at least i learned a bit about android\
+\
 UPD. finally got the flag
 ![flag](/assets/img/rootme/realistic/enddroid/enddroidflag.png)
