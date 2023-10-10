@@ -38,7 +38,7 @@ sudo apt install android-tools-adb android-tools-fastboot
 
 And then connect to device
 ```shell
-adb connect ctf04.root-me.org
+adb connect ctf04.root-me.org:5555
 ```
 
 now we can start searching for flag on the server
