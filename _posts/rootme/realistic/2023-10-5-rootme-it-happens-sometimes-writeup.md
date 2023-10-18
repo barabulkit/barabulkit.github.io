@@ -9,7 +9,7 @@ author: barabulkit
 # RootMe - It Happens, Sometimes
 
 When we first open challenge we can see this
-![fist_view](/assets/img/rootme/realistic/happens/1.png)
+![first_view](/assets/img/rootme/realistic/happens/1.png)
 
 I openned source code and in format.css we can find that there is images dir
 ![images](/assets/img/rootme/realistic/happens/2.png)
